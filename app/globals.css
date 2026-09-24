@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body {
+  @apply bg-paper text-olive font-sans antialiased;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+a { @apply text-olive no-underline; }
+a:hover { @apply text-olive-dark; }
+
+@layer components {
+  .eyebrow { @apply text-[11px] uppercase tracking-eyebrow text-olive-muted; }
+  .h2 { @apply font-serif font-light text-[clamp(34px,4vw,60px)] leading-[1.05]; }
+  .btn { @apply inline-flex items-center justify-center whitespace-nowrap rounded-full px-7 py-4 text-xs uppercase tracking-btn transition-colors cursor-pointer; }
+  .btn-olive { @apply btn bg-olive text-paper hover:bg-olive-dark; }
+  .btn-outline { @apply btn border border-olive/40 text-olive hover:bg-olive hover:text-paper; }
+  .btn-ghost-light { @apply btn border border-paper/60 text-paper hover:bg-paper/15; }
+  .field { @apply w-full border border-olive/30 bg-paper px-3.5 py-3 text-[15px] normal-case tracking-normal text-olive outline-none focus:border-olive; }
+  .section-x { @apply px-[clamp(20px,5vw,72px)]; }
+  .section-y { @apply py-[clamp(56px,8vw,120px)]; }
+}
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
